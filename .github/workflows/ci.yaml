@@ -1,0 +1,21 @@
+name: CI - Continuous Integration
+
+on:
+  push:
+    branches:
+      - feature/**
+      - release
+      - hotfix/**
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v5
+      - name: Build da Aplicação
+        run: mvn clean package
+      - name: Execução de Testes Unitários
+        run: mvn test
+      - name: Build de imagem Docker (verificação)
+        run: docker build --file Dockerfile --tag gs-0-talent-platform-ci .
