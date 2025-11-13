@@ -1,0 +1,21 @@
+name: Automacao de Versao
+
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: write
+  issues: write
+  pull-requests: write
+
+jobs:
+  release-please:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Gerando release e tag automatica
+        uses: googleapis/release-please-action@v4
+        with:
+          release-type: maven
+          token: ${{ secrets.RELEASE_PLEASE_TOKEN }}
