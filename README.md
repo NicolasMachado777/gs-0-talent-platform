@@ -38,7 +38,7 @@ A API desenvolvida integra sistemas e facilita o compartilhamento de oportunidad
    ```bash
    docker run -p 8081:8081 --rm gs-0-talent-platform-ci
    ```
-   A aplicação ficará disponível em `http://localhost:8080`.
+   A aplicação ficará disponível em `http://localhost:8081`.
 
 ## Artefatos Docker
 
