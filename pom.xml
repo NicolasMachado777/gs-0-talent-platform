@@ -9,7 +9,7 @@
 	</parent>
 	<groupId>com.globalsolution</groupId>
 	<artifactId>gs-0-talent-platform</artifactId>
-	<version>1.0.0</version>
+	<version>1.0.1-SNAPSHOT</version>
 	<name>gs-0-talent-platform</name>
 	<description>Projeto GS0</description>
 	<url/>
